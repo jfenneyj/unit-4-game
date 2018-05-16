@@ -17,36 +17,39 @@
 
 <body>
 
-  <div class="container">
+  <div class="container container-fluid">
 
-    <h2>Crystals Collector</h2>
-  </div>
-
-  <div class="container">
-    <section id="intro">
-      <ol>
-        <li>You will be given a random number at the start of the game.</li>
-        <li>There are four crystals below. By clicking on a crystal you will add a specific amonut of points to you total score.</li>
-        <li>You win the game be matching your total score to random number, you lose the game if your total score goes above
-          the random number.</li>
-        <li>The value of each crystal is hidden from you until you chick on it.</li>
-        <li>Each time when the gam starts, the game will change the values of each crystal.</li>
-      </ol>
-    </section>
-
-    <div id="randomNumber"></div>
+    <h1 class="text-center">Crystals Collector</h1>
+    <div id="result"class="text-center"></div>
+    <div class="container container-fluid">
+      <div class="row">
+          
+        <div class="col-6 sideLeft"></div>
+        <div class="col-6 sideRight"></div>
+      
+      </div>
+    </div>
+    
     <div id="winLose"></div>
 
-    <div class="container">
-      <div class="crystals"></div>
-      <div class="crystals"></div>
-      <div class="crystals"></div>
-      <div class="crystals"></div>
+<div class="d-flex justify-content-center">
+    <div id="crystal-1" class="crystals" data-random="">
+      <img  src="assets/images/crystal-1.jpg" alt="crystal1">
     </div>
-
-    <div class="totalScore"></div>
+    <div id="crystal-2" class="crystals">
+      <img src="assets/images/crystal-2.jpg" alt="crystal2">
+    </div>
+    <div id="crystal-3" class="crystals">
+      <img src="assets/images/crystal-3.jpg" alt="crystal3">
+    </div>
+    <div id="crystal-4" class="crystals">
+      <img src="assets/images/crystal-1.jpg" alt="crystal4">
+    </div>
   </div>
 
+    <div class="totalScore"></div>
+
+  </div>
 
 
 

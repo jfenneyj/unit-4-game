@@ -3,10 +3,12 @@ body {
   font-size: 12pt;
   margin: 0;
   line-height: 1.2em;
+  background: url("../images/bubbles.jpg");
+
 }
 
-body > h1 {
-  background-color: #33d;
+body  h1 {
+  background-color: #245cb1;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
@@ -17,3 +19,27 @@ body > h1 {
   padding-bottom: 15pt;
   box-shadow: 0px 5px 5px 0px rgba(171,171,171,1);
 }
+
+
+#result {
+  margin: 40px;;
+}
+
+.crystals {
+  display: inline-block;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  margin-right: 30px;
+  
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border: 2px solid #879dc2;
+  border-radius: 6px;
+
+  
+}
+
