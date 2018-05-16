@@ -8,11 +8,14 @@
 
 $(document).ready(function () {
 
-
+// variables
   var randomResult;
   var wins;
-  var loses;
+  var losses;
   var userTotal;
+
+  $("#wins").html("Wins: ");
+  $("#losses").html("Losses: ");
 
   // console.log(wins);
  //random number at the start of the game between 19 - 120.
@@ -21,17 +24,28 @@ $(document).ready(function () {
 
   $("#result").html("Random Number: " + randomResult);
 
-  for (var i = 0; i < 4; i++) {
+  
 // Each crystal has a random number between 1 - 12.
-    var random = Math.floor(Math.random() * 11) + 1;
-    // console.log(random);
+    var num1 = Math.floor(Math.random() * 11) + 1;
+    var num2= Math.floor(Math.random() * 11) + 1;
+    var num3 = Math.floor(Math.random() * 11) + 1;
+    var num4 = Math.floor(Math.random() * 11) + 1;
+    
+  // console.log(num1);
+    
 
-  }
+
+  
 
   $(".crystals").on("click",function(){
 
+    console.log(ranCrystal1);
     // console.log($(this));
-  });
+
+    });
+
+    
+  
 
 
 });
@@ -39,7 +53,7 @@ $(document).ready(function () {
 
 
 
-
+// for (var i = 0; i < 4; i++) {}
 
 
 // function computerNum(){
