@@ -8,7 +8,7 @@
 
 $(document).ready(function () {
 
-// variables
+  // variables
   var randomResult;
   var wins;
   var losses;
@@ -18,34 +18,47 @@ $(document).ready(function () {
   $("#losses").html("Losses: ");
 
   // console.log(wins);
- //random number at the start of the game between 19 - 120.
+  //random number at the start of the game between 19 - 120.
   randomResult = Math.floor(Math.random() * 82) + 19;
   // console.log(randomResult);
 
   $("#result").html("Random Number: " + randomResult);
 
-  
-// Each crystal has a random number between 1 - 12.
-    var num1 = Math.floor(Math.random() * 11) + 1;
-    var num2= Math.floor(Math.random() * 11) + 1;
-    var num3 = Math.floor(Math.random() * 11) + 1;
-    var num4 = Math.floor(Math.random() * 11) + 1;
+
+  // Each crystal has a random number between 1 - 12.
+  for (var i = 0; i < 4; i++) {
+
+    var random = Math.floor(Math.random() * 12);
+    console.log(random);
     
-  // console.log(num1);
-    
-
-
-  
-
-  $(".crystals").on("click",function(){
-
-    console.log(ranCrystal1);
-    // console.log($(this));
-
+    var crystal = $("<div>");
+    crystal.attr({
+      "class": "crystal",
+      "data-random" : random
     });
 
-    
-  
+
+
+
+    $(".crystals").append(crystal);
+
+
+  }
+  // console.log(random);
+
+
+
+
+
+  $(".crystals").on("click", function () {
+
+
+    // console.log($(this));
+
+  });
+
+
+
 
 
 });
@@ -62,7 +75,10 @@ $(document).ready(function () {
 // alert(randomNum);
 // }
 
-
+// var num1 = Math.floor(Math.random() * 11) + 1;
+//     var num2= Math.floor(Math.random() * 11) + 1;
+//     var num3 = Math.floor(Math.random() * 11) + 1;
+//     var num4 = Math.floor(Math.random() * 11) + 1;
 
 
 
