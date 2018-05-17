@@ -13,12 +13,14 @@ $(document).ready(function () {
   var wins;
   var losses;
   var userTotal;
+  var previous = 0;
+  
 
   $("#wins").html("Wins: ");
   $("#losses").html("Losses: ");
 
   // console.log(wins);
-  //random number at the start of the game between 19 - 120.
+  //random number at the start of the game between 19 - 100.
   randomResult = Math.floor(Math.random() * 82) + 19;
   // console.log(randomResult);
 
@@ -28,40 +30,58 @@ $(document).ready(function () {
   // Each crystal has a random number between 1 - 12.
   for (var i = 0; i < 4; i++) {
 
-    var random = Math.floor(Math.random() * 12);
-    console.log(random);
+    var random = Math.floor(Math.random() * 11) + 1;
+    // console.log(random);
     
+    // object
     var crystal = $("<div>");
+    // setting value
     crystal.attr({
       "class": "crystal",
-      "data-random" : random
+      "dataRandom" : random
+
     });
 
-
-
-
     $(".crystals").append(crystal);
-
 
   }
   // console.log(random);
 
+  $(".crystal").on("click", function () {
+
+    var result;
+
+    console.log(previous);
+
+    // parseInt converts to a number
+    var num = parseInt($(this).attr("dataRandom"));
+    // adding to the previous amount
+    previous += num;
+
+    if(previous > randomResult){
+
+      console.log("Sorry, You loss try again!")
+
+    } else if(previous === randomResult){
+      console.log("You Win!!")
+    }
+
+    
 
 
 
-
-  $(".crystals").on("click", function () {
-
-
-    // console.log($(this));
 
   });
 
 
 
-
-
 });
+
+
+
+
+
+
 
 
 
