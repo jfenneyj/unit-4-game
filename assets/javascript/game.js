@@ -10,14 +10,14 @@ $(document).ready(function () {
 
   // variables
   var randomResult;
-  var wins;
-  var losses;
+  var wins = 0;
+  var losses = 0;
   var previous = 0;
 
 
   function resetGame() {
-    $("#wins").html("Wins: ");
-    $("#losses").html("Losses: ");
+    
+    var images = ["assets/images/crystal.png", "assets/images/blue.png", "assets/images/green.png", "assets/images/Amethyst.png"]
 
     // console.log(wins);
     //random number at the start of the game between 19 - 100.
@@ -35,11 +35,18 @@ $(document).ready(function () {
 
       // object
       var crystal = $("<div>");
+
       // setting value
       crystal.attr({
-        "class": "crystal",
-        "dataRandom": random
 
+        "class": "crystal",
+        "dataRandom": random,
+        
+      });
+
+      crystal.css({
+        "background-image":"url('" + images[i] + "')",
+         "background-size" : "cover"   
       });
 
       $(".crystals").append(crystal);
@@ -51,28 +58,42 @@ $(document).ready(function () {
       var result;
   
   
-  
       // parseInt converts to a number
+
       var num = parseInt($(this).attr("dataRandom"));
-      console.log("This is not my day", num);
+
+      // console.log("This is not my day", num);
       // adding to the previous amount
+
       previous += num;
+
+      $("#previous").html("Total score: " + previous);
+
       console.log(previous);
+
       if (previous > randomResult) {
         randomResult = Math.floor(Math.random() * 82) + 19;
-        console.log("Sorry, You loss try again!")
+
+        losses++;
+
+        $("#losses").html("You loss: " + losses);
+
+        previous = 0;
+
         resetGame();
+
       } else if (previous === randomResult) {
-        console.log("You Win!!")
+
+        wins++;
+
+        $("#wins").html("You win: " + wins);
+
+        previous = 0;
+
         resetGame();
       }
     });
   }
-
-  
-
-
-
 
   resetGame();
 });
@@ -87,20 +108,6 @@ $(document).ready(function () {
 
 
 
-
-// for (var i = 0; i < 4; i++) {}
-
-
-// function computerNum(){
-// randomNum = Math.floor((Math.random()* 120)- 1);
-
-// alert(randomNum);
-// }
-
-// var num1 = Math.floor(Math.random() * 11) + 1;
-//     var num2= Math.floor(Math.random() * 11) + 1;
-//     var num3 = Math.floor(Math.random() * 11) + 1;
-//     var num4 = Math.floor(Math.random() * 11) + 1;
 
 
 
