@@ -22,7 +22,14 @@ body h1 {
 }
 
 #result {
+  background-color: #245cb1;
+  color: #fff;
+  align-content: center;
   margin: 100px 0px 40px 0px;
+  padding: 10px 0 10px 0;
+  border: 10px solid #245cb1;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 .crystals {
@@ -30,6 +37,8 @@ body h1 {
   justify-content: space-around;
   align-items: center;
   margin-top: 100px;
+  
+  
   
 }
 
@@ -41,8 +50,17 @@ body h1 {
   height: 100px;
   width: 100px;
   border-radius: 6px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  transition: width 1s;
   /* margin-right: 30px; */
-  
+}
+
+.crystal:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  transform: translate(5px, 25px);
+  cursor: pointer;
+  transition: width 1s;
+
 }
 
 img {
@@ -51,11 +69,19 @@ img {
 
 #previous {
   margin-top: 75px;
+  
 }
 
-.bottom {
-  height: 50%;
-  background-color: #245cb1;
-  margin: 0 auto;
+#previous, #wins,
+#losses {
+  background-color: #fff;
+  color: #245cb1;
+  padding: 5px 0;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+
 }
+
+
 

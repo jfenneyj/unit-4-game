@@ -69,6 +69,7 @@ $(document).ready(function () {
 
       $("#previous").html("Total score: " + previous);
 
+
       console.log(previous);
 
       if (previous > randomResult) {
